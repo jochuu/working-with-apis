@@ -6,10 +6,55 @@
     <meta name="description" content="DescriptionForMetaTags" />
   </head>
   <body>
-    <header></header>
-    <nav></nav>
-    <main id="content"></main>
-    <footer></footer>
+    <div class="container">
+      <div class="left">
+        <header>
+          <h1>.PokeDex</h1>
+          <p>working with APIs</p>
+        </header>
+        <!-- <nav>
+        <button class="nav-button">test</button>
+        <button class="nav-button">test</button>
+        <button class="nav-button">test</button>
+        <button class="nav-button">test</button>
+        <button class="nav-button">test</button>
+        <button class="nav-button">test</button>
+      </nav> -->
+      </div>
+      <div class="right">
+        <main id="content">
+          <div class="pokemon-inputs">
+            <input
+              type="text"
+              id="pokemon-name-input"
+              placeholder="e.g. magikarp"
+              autocomplete="off"
+            />
+            <button class="button" id="fetch-pokemon-button">fetch!</button>
+          </div>
+          <div class="pokemon-info">
+            <div class="pokemon-info-header">
+              <div class="pokedex-entry"></div>
+              <div class="pokemon-name"></div>
+              <div class="pokemon-types"></div>
+            </div>
+            <div class="pokemon-sprites">
+              <div class="pokemon-sprites-normal">
+                <div class="sprite-back"></div>
+                <div class="sprite-front"></div>
+              </div>
+              <div class="pokemon-sprites-shiny">
+                <div class="sprite-back"></div>
+                <div class="sprite-front"></div>
+              </div>
+            </div>
+            <div class="pokemon-additional">
+              <div id="evo-chain"></div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer></footer>
+    </div>
   </body>
-  <script src="script.js"></script>
 </html>

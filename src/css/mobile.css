@@ -1,0 +1,54 @@
+/******
+MOBILE
+*******/
+@media screen and (max-width: 850px) {
+	h1 {
+		font-size: 2.2rem;
+	}
+
+	.container {
+		display: flex;
+		flex-flow: column wrap;
+		margin: 0 auto;
+		padding: 1vh;
+	}
+
+	.left {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+	}
+
+	.right {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.pokemon-info {
+		display: flex;
+		flex-flow: row wrap;
+		height: 30vh;
+		margin: 0 auto;
+	}
+
+	.pokemon-info-header {
+		width: 50%;
+		margin: 0 auto;
+		height: 15vh;
+	}
+
+	.pokemon-sprites {
+		width: 50%;
+		margin: 0 auto;
+		height: 15vh;
+
+	}
+
+	.pokemon-additional {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-self: flex-start;
+	}
+
+}
