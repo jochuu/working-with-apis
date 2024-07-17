@@ -1,5 +1,3 @@
-import { getPokemonNames } from './pokeapi';
-
 // autocomplete pokemon names
 const autocomplete = function (input, namesArray) {
   let currentFocus;

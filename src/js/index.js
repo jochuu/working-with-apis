@@ -8,7 +8,11 @@ import { getPokemonNames, getPokemonInfo, getEvoChain } from './pokeapi';
 // calls getPokemonInfo() and getEvoChain() and adds to DOM
 // NOTE: maybe this function doesn't need to exist as id from getPokemonInfo doesn't work for getEvoChain
 async function combinePokemonInfo(pokemon) {
+  // show loading div
   const { id, name, cries, sprites, types } = await getPokemonInfo(pokemon);
+
+  // hide loading div
+  document.getElementById('loading').innerHTML = '';
 
   // removes all current pokemon info
   clearPokemonInfo();
@@ -86,10 +90,20 @@ const clearPokemonInfo = function () {
 // fetch! button (gets pokemon name from input, calls combinePokemonInfo)
 document.getElementById('fetch-pokemon-button').onclick = () => {
   const pokemonName = document.getElementById('pokemon-name-input').value;
-  combinePokemonInfo(pokemonName);
+  document.getElementById('loading').innerHTML = 'loading...';
+  if (pokemonNames.includes(pokemonName)) {
+    combinePokemonInfo(pokemonName);
+  } else {
+    document.getElementById(
+      'loading'
+    ).innerHTML = `error: pokemon doesn't exist`;
+  }
 };
+
+let pokemonNames;
 
 // autocomplete
 getPokemonNames().then((names) => {
+  pokemonNames = names;
   autocomplete(document.getElementById('pokemon-name-input'), names);
 });
